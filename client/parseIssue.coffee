@@ -7,6 +7,7 @@ class @globalLayout
 
 
     Session.set "global.ui.dialogData", opts.data
+    Session.set "global.ui.dialogJSONData", opts.jsonOnly
     Session.set "global.ui.dialogTemplate", opts.template
 
     Tracker.afterFlush =>
@@ -60,3 +61,5 @@ Template.registerHelper 'globalDialogTemplate', ->
 
 Template.registerHelper 'globalDialogData', ->
   Session.get "global.ui.dialogData"
+
+

@@ -1,6 +1,7 @@
 Template.dialog.created = ->
   instance = @
   console.log("dialog opened with data", instance.data)
+  console.log("json data from session", Session.get( 'dialog.ui.dialogJSONDate'))
 
 
 Template.dialog.events
