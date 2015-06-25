@@ -41,10 +41,12 @@ Template.global.events
   "click [data-open-dialog]": (e) ->
 
     node = $ e.currentTarget
-    console.log("test", node[0].getAttribute('data-use-context'))
+
     globalLayout.showDialog
       data: node.data("useContext")
       template: node.data("open-dialog")
+      #json only
+      jsonOnly: node[0].getAttribute('data-use-context')
 
 
 
