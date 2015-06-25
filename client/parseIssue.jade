@@ -1,0 +1,20 @@
+
+head
+  title parseIssue
+
+body
+ +global
+
+
+template(name="global")
+  span List test
+
+  ul
+    +each listItems
+      li
+        span {{ name }}
+        +testComponent this
+
+  div(global-dialog style="border:1px solid black; display:none")
+    +if globalDialogTemplate
+      +UI.dynamic(template=globalDialogTemplate data=globalDialogData)

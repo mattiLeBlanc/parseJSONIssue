@@ -1,0 +1,9 @@
+template(name="dialog")
+  h1 Dialog
+  div
+    span Delete {{ name }}?
+
+  //- Footer
+  div
+    button(data-close) Close
+    button(data-close data-action-delete) Delete
