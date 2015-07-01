@@ -1,0 +1,26 @@
+<head>
+  <title> parseIssue</title>
+
+</head>
+
+<body>
+ {{> global }}
+</body>
+
+<template name="global">
+  <span>List test</span>
+
+  <ul>
+    {{ #each listItems }}
+      <li>
+        <span> {{ name }}</span>
+        {{>testComponent this }}
+      </li>
+    {{/each}}
+  </ul>
+  <div global-dialog style="border:1px solid black; display:none">
+    {{ #if globalDialogTemplate }}
+      {{> Template.dynamic template=globalDialogTemplate data=globalDialogData }}
+    {{/if}}
+  </div>
+</template>
